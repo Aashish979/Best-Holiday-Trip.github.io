@@ -1,0 +1,100 @@
+/* Style Here */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* ----------------- Navbar -------------- */
+.navbar{
+    padding: 25px 0 !important;
+    font-size: 20px;
+}
+
+
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+
+
+
+}
+
+.top-nav-collapse{
+    background-color: black;
+    padding: 0.75rem !important;
+    }
+
+
+    .btn{
+    border-radius: 50px;
+}
+
+
+
+/* -------------- Landing Page ------------- */
+.landing-div{
+    background: white url("../../images/bg-image.jpg") no-repeat scroll center ;
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    width: 100%;
+}
+.landing-wrapper{
+    background-color:rgba(0,0,0,0.5);
+    height: 100%;
+
+}
+.landing-wrapper h1{
+    font-size: 80px;
+}
+
+
+
+
+/* ------------- Tour Images Section ------------*/
+.tour-image{
+    border-radius: 10px;
+    box-shadow: 0 15px 15px black;
+}
+
+
+
+/* ---------------- Main Footer -------------- */
+.main-footer{
+    background: white url("../../images/footer-image.jpg") no-repeat scroll center;
+    background-size: cover;
+    color: white;
+}
+.footer-wrapper{
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+
+}
+
+
+/* For responsive Small Screen */
+@media (max-width: 900px){
+    .navbar-brand{
+        margin-left: 25px;
+    }
+    div button{
+        margin-right: 10px;
+    }
+  .navbar-collapse ul li{
+    margin-left: 20px;
+
+  } 
+
+  h5 , p{
+    text-align: center;
+  }
+}
+
+
