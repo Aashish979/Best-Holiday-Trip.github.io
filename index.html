@@ -1,555 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no
+          , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
+    <title>Best Holiday Trip</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta name="application-name" content="BeyondJourney" />
-    <meta name="theme-color" content="#FFF">
-    <meta name="msapplication-navbutton-color" content="#4a4a4a" />
-    <meta name="msapplication-starturl" content="/">
-    <meta name="view-transition" content="same-origin" />
-
-    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
-
-
-    <meta name="google-site-verification" content="Gx2T1oJX2yNrFGRrA91vsRT90qj_bsL7rI_iMF3C4jw" />
-
-  <title>Beyond Journey</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --orange: #ff7f00;
-  --colors-accent-200: #98ff53;
-  --green: #28a745;
-}
-
-body{
-  font-size: 4px;
-}
-
-/* ================= NAVBAR ================= */
-.navbar {
-  padding: 0.6rem 0;
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  color: white !important;
-  font-size: .5rem !important;
-}
-.navbar-brand span.orange { color: var(--orange); }
-.navbar-brand span.green { color: var(--colors-accent-200); }
-.navbar-nav .nav-link {
-  color: white !important;
-  font-weight: 500;
-  font-size: 0.95rem;
-  padding: 0.5rem 0.8rem;
-  transition: color 0.3s ease;
-}
-.navbar-nav .nav-link:hover { color: var(--orange) !important; }
-.nav-item.dropdown:hover .dropdown-menu { display: block; }
-.btn-login {
-  border: 1px solid white;
-  border-radius: 6px;
-  color: white !important;
-  padding: 4px 16px;
-  font-size: 0.9rem;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-.btn-login:hover {
-  background: white;
-  color: #333 !important;
-}
-.menu-btn {
-  color: white;
-  border: none;
-  background: transparent;
-  font-size: 1.5rem;
-}
-
-/* ================= HERO ================= */
-.hero-section {
-  position: relative;
-  height: 70vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.hero-section video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
-.hero-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  margin-bottom: 6%;
-  margin-left: 9%;
-}
-
-/* ================= SEARCH BOX ================= */
-.search-box {
-  background: white;
-  border-radius: 50px;
-  padding: 8px 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  max-width: 360px;
-  margin: 25px auto 0;
-  display: flex;
-  align-items: center;
-  border: 2px solid var(--colors-accent-200);
-}
-.search-box input {
-  border: none;
-  outline: none;
-  width: 100%;
-  padding-left: 10px;
-  font-size: 1rem;
-}
-.search-box i {
-  font-size: 1.2rem;
-  color: black;
-}
-
-/* ================= SIDEBAR ================= */
-#sidebar {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 280px;
-  height: calc(100% - 40px);
-  bottom: 40px;
-  background: #fff;
-  box-shadow: -4px 0 24px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04);
-  border-radius: 16px 0 0 16px;
-  transition: all 0.4s cubic-bezier(.4,0,.2,1);
-  z-index: 9999;
-  padding: 22px 18px 18px;
-  color: #222;
-  overflow-y: auto;
-  border-left: 3px solid var(--green);
-}
-#sidebar .sidebar-profile {
-  display: flex;
-  align-items: center;
-  margin-bottom: 18px;
-  gap: 12px;
-}
-#sidebar .sidebar-profile img {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  border: 2px solid var(--green);
-  object-fit: cover;
-}
-#sidebar .sidebar-profile .profile-info {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--green);
-  letter-spacing: 0.2px;
-}
-#sidebar hr {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 10px 0 16px;
-}
-#sidebar h4 {
-  color: #222;
-  margin-bottom: 10px;
-  font-size: 1.08rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-#sidebar ul { list-style: none; padding: 0; margin: 0; }
-#sidebar ul li { margin: 2px 0; transition: all 0.2s; }
-#sidebar ul li a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
-}
-#sidebar ul li a:hover {
-  color: var(--green);
-  background: #f6fefb;
-  font-weight: 600;
-}
-#sidebar ul li a i {
-  font-size: 1.1rem;
-  color: var(--green);
-}
-@media (max-width: 500px) {
-  #sidebar {
-    width: 90vw;
-    right: -90vw;
-    border-radius: 0;
-    padding: 16px 8px;
-  }
-}
-
-/* ================= DESTINATION SLIDER ================= */
-.destination-overlay {
-  position: absolute;
-  bottom: -30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  max-width: 900px;
-  z-index: 3;
-  text-align: center;
-  width: 55vw;
-}
-.destinations {
-  display: flex;
-  gap: 1.5rem;
-  transition: transform 0.6s ease-in-out;
-  will-change: transform;
-}
-.destination-item {
-  min-width: 200px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.destination-item:hover { transform: translateY(-5px); }
-.destination-img {
-  width: 180px; height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.destination-name {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(0,0,0,0.7);
-  margin-top: 8px;
-}
-
-/* Slider dots */
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  gap: 6px;
-}
-.slider-dots span {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: #ccc;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.slider-dots span.active {
-  background: var(--green);
-  transform: scale(1.2);
-}
-
-/* ================= RESPONSIVE BREAKPOINTS ================= */
-
-/* Tablet (600px - 1024px) */
-@media (min-width: 600px) and (max-width: 1024px) {
-  .navbar { padding: 0.5rem 0; }
-  .navbar-brand img { height: 34px; }
-  .navbar-nav .nav-link { font-size: 0.9rem; padding: 0.45rem 0.7rem; }
-  .btn-login { font-size: 0.85rem; padding: 4px 12px; }
-
-  .hero-section { height: 60vh; }
-  .hero-text { margin: 0 auto; padding: 0 20px; }
-  .hero-text h1 { font-size: 1.8rem; line-height: 2.1rem; }
-
-  .search-box { max-width: 70%; padding: 8px 14px; }
-
-  .destination-overlay { bottom: -20%; width: 85%; }
-  .destinations { gap: 1.2rem; }
-  .destination-img { width: 140px; height: 140px; border: 5px solid #fff; }
-  .destination-name { font-size: 0.9rem; }
-}
-
-/* ================= MOBILE NAVBAR FIX ================= */
-@media (max-width: 768px) {
-  /* Hide Holiday Tour + Best Visit dropdowns in navbar */
-  .navbar-nav .nav-item.dropdown {
-    display: none !important;
-  }
-
-  /* Keep only Sign In + Menu */
-  .navbar-nav .btn-login,
-  .navbar-nav .menu-btn {
-    display: inline-block !important;
-  }
-
-  .destination-overlay {
-    width: 55vw;
-  }
-
-}
-
-/* Extra Small (≤480px) */
-@media (max-width: 480px) {
-  .navbar-brand img { height: 28px; }
-  .navbar-nav .nav-link { font-size: 0.75rem !important; }
-
-  .hero-text h1 { font-size: 1.2rem; line-height: 1.4rem; padding: 0 10px; }
-
-  .search-box { width: 100%; max-width: none; }
-
-  .destination-overlay {
-    position: relative;
-    bottom: auto;
-    margin-top: 20px;
-    width: 100%;
-  }
-  .destinations { justify-content: center; gap: 0.8rem; }
-  .destination-img { width: 80px; height: 80px; }
-  .destination-name { font-size: 0.75rem; }
-
-  .btn-login {   min-height: 44px; min-width: 44px !important; }
-  .menu-btn {
-  display: block !important;
-  border: none;
-  background: transparent;
-  color: #fff; /* change if background is light */
-}
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,..."); /* Bootstrap adds this automatically */
-
-}
-
- .destination-overlay {
-    width: 55vw;
-  }
-
-/* Large Screens (≥1440px) */
-@media (min-width: 1440px) {
-  .navbar .container { max-width: 1400px; }
-  .navbar-brand img { height: 50px; }
-  .navbar-nav .nav-link { font-size: 1.1rem; padding: 0.6rem 1rem; }
-  .btn-login { font-size: 1rem; padding: 6px 18px; }
-
-  .hero-section { height: 85vh; }
-  .hero-text h1 { font-size: 3rem; line-height: 3.4rem; }
-
-  .search-box { max-width: 500px; padding: 12px 20px; font-size: 1.1rem; }
-
-  .destination-overlay { bottom: -15%; width: 70%; max-width: 1200px; }
-  .destination-img { width: 220px; height: 220px; border: 8px solid #fff; }
-  .destination-name { font-size: 1.1rem; }
-}
-
-/* Ultra Wide (≥1920px) */
-@media (min-width: 1920px) {
-  .navbar .container { max-width: 1600px; }
-  .hero-text h1 { font-size: 3.5rem; line-height: 4rem; }
-  .search-box { max-width: 600px; }
-  .destination-overlay { width: 65%; max-width: 1400px; }
-  .destination-img { width: 250px; height: 250px; }
-  .destination-name { font-size: 1.2rem; }
-}
-
-
-
-
-</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class=" navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/logo-ft.png" alt="Beyond Journey Logo" height="40">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item dropdown me-4">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Holiday Tour Packages</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">International Tour</a></li>
-              <li><a class="dropdown-item" href="#">India Tour</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown me-4">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Best Visit</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">By Seasons</a></li>
-              <li><a class="dropdown-item" href="#">By Month</a></li>
-            </ul>
-          </li>
-          <li class="nav-item me-4"><a class="nav-link" href="#">Travel Blogs</a></li>
-          <li class="nav-item me-4"><a class="btn btn-login" href="#">Sign In</a></li>
-          <li class="nav-item">
-            <button class="menu-btn" id="menuBtn"><i class="bi bi-list"></i></button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Main Header -->
+    <header class="main-header">
 
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <div class="sidebar-profile">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
-      <div class="profile-info">Hello Ashish</div>
-    </div>
-    <hr>
-    <ul>
-      <li><a href="#"><i class="bi bi-geo-alt"></i> Random Tour Package</a></li>
-      <li><a href="#"><i class="bi bi-compass"></i> Adventure Trip</a></li>
-      <li><a href="#"><i class="bi bi-calendar-week"></i> Weekend Getaway</a></li>
-      <li><a href="#"><i class="bi bi-lightbulb"></i> Travel Tips</a></li>
-      <li><a href="#"><i class="bi bi-envelope"></i> Contact Us</a></li>
-    </ul>
-  </div>
+        <!-- Navbar -->
 
- <!-- Hero -->
-<section class="hero-section">
-  <video autoplay muted loop playsinline>
-    <source src="assets/video/group departure.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
+        <nav class="navbar navbar-expand-lg scrolling-navbar navbar-dark fixed-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <i class=" fa fa-seedling"></i> Best Holiday Trip</a>
+                <button class="navbar-toggler mr-2" data-toggle="collapse" data-target="#ui_navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <div class="hero-text container">
-      <h1>Har Safar <span style="font-family: 'Satisfy', cursive; color: #98ff53;">Ek Nayi</span> Kahani</h1>
-    <div class="search-box">
-      <i class="bi bi-search"></i>
-      <input type="text" placeholder="Search countries, cities">
-    </div>
-  </div>
+                <div class="collapse navbar-collapse" id="ui_navbar">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#places">Destinations</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
 
-<!-- Destination Overlay -->
-<div class="destination-overlay">
-  <div class="destinations" id="destinations">
-    <!-- JS Injected -->
-  </div>
-  <div class="slider-dots" id="sliderDots"></div>
-</div>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#footer">About </a>
+                        </li>
+                        <li class="nav-item px-2">
 
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const sidebar = document.getElementById("sidebar");
+                            <a href="#contact" class="btn btn-danger">Contact</a>
 
-menuBtn.addEventListener("click", () => {
-  sidebar.style.right = sidebar.style.right === "0px" ? "-300px" : "0";
-});
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-document.addEventListener("click", (event) => {
-  if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
-    sidebar.style.right = "-300px";
-  }
-});
 
-// Typewriter effect for search
-const searchInput = document.querySelector('.search-box input');
-const text = "Where do you want to Holiday?";
-let i = 0;
-function typeWriter() {
-  if (i < text.length) {
-    searchInput.placeholder = text.substring(0, i + 1);
-    i++;
-  } else {
-    i = 0;
-  }
-  setTimeout(typeWriter, 200);
-}
-typeWriter();
 
-const destinationsData = [
-  { name: "Sri Lanka", img: "assets/images/Inter-national-trip/1.jpg" },
-  { name: "Europe", img: "assets/images/Inter-national-trip/2.jpg" },
-  { name: "Dubai", img: "assets/images/Inter-national-trip/3.jpg" },
-  { name: "Mauritius", img: "assets/images/Inter-national-trip/4.jpg" },
-  { name: "Singapore", img: "assets/images/Inter-national-trip/5.jpg" },
-  { name: "North Goa", img: "assets/images/Inter-national-trip/6.jpg" },
-  { name: "Vietnam", img: "assets/images/Inter-national-trip/7.jpg" },
-  { name: "Maldives", img: "assets/images/Inter-national-trip/8.jpg" },
-  { name: "Malaysia", img: "assets/images/Inter-national-trip/9.jpg" }
-];
 
-const container = document.getElementById("destinations");
-const dotsContainer = document.getElementById("sliderDots");
+        <!-- Landing Page -->
+        <section id="home" class="p-3">
 
-let currentIndex = 0;
 
-// Render items
-destinationsData.forEach(dest => {
-  const div = document.createElement("div");
-  div.classList.add("destination-item");
-  div.innerHTML = `
-    <img src="${dest.img}" alt="${dest.name}" class="destination-img">
-    <span class="destination-name">${dest.name}</span>
-  `;
-  container.appendChild(div);
-});
+            <div class="landing-div">
+                <div class="landing-wrapper d-flex flex-column h-100 align-items-center justify-content-center text-center">
+                    <div class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1 class="display-3 animated slideInLeft delay-1s">Enjoy Ultimate Vacations <br> with Us</h1>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="display-3 animated slideInRight delay-1s">Make Tours Amazing <br> with Us</h1>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="display-4 animated slideInDown delay-1s">Feel Relaxed in Holidays <br> with Us</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-// Render dots
-destinationsData.forEach((_, index) => {
-  const dot = document.createElement("span");
-  if (index === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => goToSlide(index));
-  dotsContainer.appendChild(dot);
-});
+    </header>
+    </section>
 
-const dots = document.querySelectorAll(".slider-dots span");
 
-// Slide function
-function goToSlide(index) {
-  currentIndex = index;
-  const offset = currentIndex * (200 + 24); // item width + gap
-  container.style.transform = `translateX(-${offset}px)`;
-  updateDots();
-}
 
-// Update dots
-function updateDots() {
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[currentIndex].classList.add("active");
-}
 
-// Auto slide
-function autoSlide() {
-  currentIndex++;
-  if (currentIndex >= destinationsData.length) currentIndex = 0;
-  goToSlide(currentIndex);
-}
-setInterval(autoSlide, 2500);
-</script>
+    <!-- Destination -->
+    <hr class="mt-5 mb-5" width="80%">
+    <section id="places" class="p-3 mt-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h5 class="display-4">
+                        <span class="text-info">Popular</span> Places
+                    </h5>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, excepturi!</p>
+                </div>
+
+            </div>
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_1.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title ">Munnar,Kerala</h3>
+                            <br>
+
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 35,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_2.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Alappuzha,Kerala</h3>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 50,000 Inr/Person</p>
+
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_3.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Pondicherry</h3>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 25,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_4.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Tamilnadu</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 30,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_6.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Gujarat</h3>
+                            <br><br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 40,000 Inr/Person</p>
+
+
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_14.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Andaman and Nicobar Islands</h4>
+
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 25,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_4.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Hyderabad</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 45,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_6.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title"> West Bengal</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 55,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_13.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Shimla</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 30,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_9.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Delhi</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 50,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/HP1.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Himachal Pradesh</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 20,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-5 tour-image">
+                        <img src="img/destinations/card_11.jpg" class="img-fluid" alt="">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Manali</h3>
+                            <br>
+                            <br>
+                            <p class="card-text">5 Nts/6 Days <br> Package cost : 25,000 Inr/Person</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <hr class="mt-5 mb-5" width="80%">
+    <!-- Gallery Section -->
+    <section id="gallery" class="p-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h5 class="display-4">
+                        <span class="text-teal">Photo</span> Gallery
+                    </h5>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, repudiandae.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_3.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_4.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_5.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_6.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_7.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_8.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_9.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_10.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_11.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/gallery/gallery_12.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="mt-5 mb-5" width="80%">
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mt-5">
+                        <div class="card-body bg-dark text-center text-white">
+                            <i class="fa fa-envelope fa-4x"></i>
+                            <h2>Contact For Bookings</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque excepturi itaque praesentium. Accusamus beatae distinctio dolore eum iure magnam maiores maxime, natus quam repellendus saepe sint suscipit temporibus vitae voluptates?</p>
+                        </div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h3>Location</h3>
+                        </li>
+                        <li class="list-group-item">
+                            Best Holiday Trip Pvt Ltd
+                        </li>
+                        <li class="list-group-item">
+                            Dilshad Garden , Delhi
+                        </li>
+                        <li class="list-group-item">
+                            India
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mt-5 ">
+                        <div class="card-header bg-dark text-white text-center">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <div class="card-body bg-light">
+                            <form id="contactForm" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" id="uname" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" name="phone" id="number" placeholder="Mobile Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="destination" placeholder="Loved Destination" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" rows="3" placeholder="Write Your Message Here...." required></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Footer -->
+    <section id="footer">
+        <footer class="main-footer mt-4">
+            <div class="footer-wrapper">
+                <div class="container p-5">
+                    <div class="row">
+                        <!-- About Company -->
+                        <div class="col-md-3 mt-5">
+                            <h5 class="text-white mb-4">About Agency</h5>
+                            <p class="text-muted">Best Holiday Trip has a team of highly creative, enthusiastic, professional and multi-lingual team that is active 24×7 in order to assist you with the best travel experiences.</p>
+                            <!-- Social Media Links -->
+                            <div class="social-links mt-4">
+                                <a href="#" class="text-white me-4"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#" class="text-white me-4"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#" class="text-white me-4"><i class="fab fa-instagram fa-lg"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-3 mt-5">
+                            <h5 class="text-white mb-4">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><a href="#home" class="text-muted">Home</a></li>
+                                <li class="mb-3"><a href="#places" class="text-muted">Destinations</a></li>
+                                <li class="mb-3"><a href="#gallery" class="text-muted">Gallery</a></li>
+                                <li class="mb-3"><a href="#contact" class="text-muted">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Destinations -->
+                        <div class="col-md-3 mt-5">
+                            <h5 class="text-white mb-4">Popular Destinations</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><a href="#" class="text-muted">Kerala</a></li>
+                                <li class="mb-3"><a href="#" class="text-muted">Himachal Pradesh</a></li>
+                                <li class="mb-3"><a href="#" class="text-muted">Andaman & Nicobar</a></li>
+                                <li class="mb-3"><a href="#" class="text-muted">Gujarat</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-3 mt-5">
+                            <h5 class="text-white mb-4">Contact Info</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3 text-muted"><i class="fas fa-map-marker-alt me-2"></i> Dilshad Garden, Delhi, India</li>
+                                <li class="mb-3 text-muted"><i class="fas fa-phone me-2"></i> +91 XXXXX XXXXX</li>
+                                <li class="mb-3 text-muted"><i class="fas fa-envelope me-2"></i> info@bestholidaytrip.com</li>
+                            </ul>
+                        </div>
+
+                        <!-- Copyright -->
+                        <hr class="mt-5 mb-4" style="background-color: rgba(255,255,255,0.2)">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p class="text-muted mb-0">
+                                    Copyright &copy; 2025 Best Holiday Trip. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </section>
+
+    <!-- Bootstrap Js files-->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/mdb.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
